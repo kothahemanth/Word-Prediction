@@ -1,3 +1,3 @@
-pip install streamlit nltk spacy 
+streamlit nltk spacy 
 python -m spacy download en_core_web_sm
 
