@@ -1,7 +1,4 @@
-import streamlit as st
-import random
 import spacy
-import re
 import subprocess
 import sys
 
@@ -11,7 +8,6 @@ try:
 except OSError:
     subprocess.run([sys.executable, "-m", "spacy", "download", "en_core_web_sm"])
     nlp = spacy.load("en_core_web_sm")
-
 
 # Predefined chatbot responses
 responses = {
