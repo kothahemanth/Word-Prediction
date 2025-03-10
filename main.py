@@ -1,4 +1,7 @@
+import streamlit as st
+import random
 import spacy
+import re
 import subprocess
 import sys
 
