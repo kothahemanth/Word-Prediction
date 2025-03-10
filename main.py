@@ -1,14 +1,15 @@
-import streamlit as st
-import random
 import spacy
+import streamlit as st
 import re
 import subprocess
 import sys
+import random
 
-# Ensure the spaCy model is installed at runtime
+# Check if the spaCy model is installed, if not, install it
 try:
     nlp = spacy.load("en_core_web_sm")
 except OSError:
+    subprocess.run([sys.executable, "-m", "pip", "install", "spacy"])
     subprocess.run([sys.executable, "-m", "spacy", "download", "en_core_web_sm"])
     nlp = spacy.load("en_core_web_sm")
 
